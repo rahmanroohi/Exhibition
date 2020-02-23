@@ -12,11 +12,11 @@ class Splash extends StatefulWidget {
 
 class _Splash extends State<Splash>  {
 
-  bool Visible =false;
+  bool Visible =true;
   @override
   void initState() {
     super.initState();
-    //loadData();
+    loadData();
 
   }
 
@@ -29,7 +29,7 @@ class _Splash extends State<Splash>  {
 
 
   Future<Timer> loadData() async {
-    return new Timer(Duration(seconds: 7), onDoneLoading);
+    return new Timer(Duration(seconds: 5), onDoneLoading);
   }
 
   onDoneLoading() async {
@@ -50,8 +50,8 @@ class _Splash extends State<Splash>  {
               child:Stack(
                 children: <Widget>[
                  AnimatedOpacity(
-                   opacity:Visible?0:1,
-                     duration:Duration(seconds:5 ) ,
+                   opacity:Visible?1:0,
+                     duration:Duration(seconds:3 ) ,
                      child:Center(child:Column(
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: <Widget>[

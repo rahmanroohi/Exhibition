@@ -275,10 +275,10 @@ class _MasterPage extends State<MasterPage> {
           builder: (context, snapshot) {
             if (snapshot.connectionState != ConnectionState.done) {
               // return: show loading widget
-              return Loading(
-                  indicator: BallPulseIndicator(),
-
-                  color: Colors.pink);
+              return Container(
+                  width: 80,
+                  height: 80,
+                  child:Center(child:CircularProgressIndicator()));
             } else if (snapshot.hasError) {
               // return: show error widget
             }
